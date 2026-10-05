@@ -1,0 +1,203 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== VARIÁVEIS DE COR (paleta oficial do projeto) ===== */
+:root {
+    --cor-fundo: black;
+    --cor-fundo-secundaria: rgb(18, 18, 18);
+    --cor-destaque: greenyellow;      /* verde-limão ácido */
+    --cor-destaque-escuro: yellowgreen;
+    --cor-secundaria: orange;         /* cor secundária do projeto */
+    --cor-texto: whitesmoke;
+    --cor-texto-secundario: darkgray;
+    --cor-borda: rgb(40, 40, 40);
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    background-image:
+        linear-gradient(rgba(173, 255, 47, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(173, 255, 47, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* ===== HERO / BANNER ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(173, 255, 47, 0.08), transparent 60%);
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 9vw, 6rem);
+    color: var(--cor-destaque);
+    text-shadow: 0 0 30px rgba(173, 255, 47, 0.6);
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    max-width: 620px;
+    font-size: 1.3rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 2.5rem;
+}
+
+/* ===== BOTÃO ===== */
+.botao {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    color: var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background-color: var(--cor-destaque);
+    color: black;
+    box-shadow: 0 0 35px greenyellow;
+}
+
+/* ===== SEÇÕES GERAIS ===== */
+section {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.3rem, 5vw, 3.2rem);
+    color: var(--cor-texto);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--cor-destaque);
+    margin: 1rem auto 0;
+    box-shadow: 0 0 10px greenyellow;
+}
+
+section > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    color: var(--cor-texto-secundario);
+    font-size: 1.1rem;
+}
+
+/* ===== CARDS (Arquivos digitais / Eletrônicos / Embalagens) ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--cor-fundo-secundaria);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 2.2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: greenyellow;
+    box-shadow: 0 0 25px rgba(173, 255, 47, 0.25);
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--cor-destaque);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.card h3::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--cor-secundaria);
+    margin: 0 auto 0.8rem;
+}
+
+.card p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+}
+
+/* ===== SEÇÃO "POR QUE IMPORTA" ===== */
+#importa {
+    background-color: var(--cor-fundo-secundaria);
+    max-width: 100%;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+#importa h2,
+#importa p {
+    max-width: 800px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+    section {
+        padding: 3.5rem 1.2rem;
+    }
+
+    .hero {
+        padding: 1.5rem;
+    }
+
+    body {
+        background-size: 25px 25px;
+    }
+}
