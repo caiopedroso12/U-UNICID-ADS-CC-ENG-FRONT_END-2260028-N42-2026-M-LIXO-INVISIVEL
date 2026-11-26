@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade | Lixo Invisível</title>
+    <meta name="description" content="Medidas de acessibilidade e inclusão aplicadas no site Lixo Invisível: teclado, leitores de tela, contraste e multimídia.">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Orbitron:wght@700;900&amp;family=Space+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="marca" href="index.html">Lixo <span>Invisível</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+            <nav aria-label="Navegação principal">
+                <ul class="menu" id="menu"><li><a href="index.html">Home</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="impacto.html">Impacto</a></li><li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="midia.html">Mídia</a></li><li><a href="noticias.html">Notícias</a></li><li><a href="contato.html">Contato</a></li><li><a href="orcamento_hospedagem.html">Orçamento</a></li></ul>
+            </nav>
+        </div>
+    </header>
+    <main id="conteudo" class="interna">
+        <div class="page-hero">
+            <span class="rotulo">acessibilidade</span>
+            <h1>Um site para todo mundo</h1>
+            <p>Pessoas com deficiência são público prioritário aqui. Estas são as medidas aplicadas.</p>
+        </div>
+
+        <section>
+            <h2>Medidas aplicadas</h2>
+            <div class="cards tres">
+                <div class="card"><h3>Teclado</h3><ul><li>Link "Pular para o conteúdo" no topo.</li><li>Foco visível em links, botões e campos.</li><li>Menu no celular abre e fecha pelo teclado (Esc fecha).</li></ul></div>
+                <div class="card"><h3>Leitores de tela</h3><ul><li>Marcações semânticas: header, nav, main e footer.</li><li>Página atual marcada com aria-current.</li><li>Textos alternativos nas imagens e títulos nos iframes.</li></ul></div>
+                <div class="card"><h3>Visual</h3><ul><li>Contraste alto (tabela abaixo).</li><li>Tamanhos em rem: o texto acompanha o zoom.</li><li>Animações reduzidas se o sistema pedir.</li></ul></div>
+                <div class="card"><h3>Multimídia</h3><ul><li>Vídeo com legenda (WebVTT) e transcrição.</li><li>Áudio com transcrição.</li><li>Leitura do resumo em voz alta na página Mídia.</li></ul></div>
+                <div class="card"><h3>Formulário</h3><ul><li>Todo campo tem label.</li><li>Obrigatórios indicados e validados.</li><li>Mensagens de retorno anunciadas ao leitor de tela.</li></ul></div>
+                <div class="card"><h3>Responsivo</h3><ul><li>Celular, tablet e desktop.</li><li>Tabelas rolam dentro da própria caixa.</li><li>Sem rolagem horizontal na página.</li></ul></div>
+            </div>
+        </section>
+        <section>
+            <h2>Contraste das cores</h2>
+            <div class="tabela-wrap"><table><caption>Razão de contraste calculada pela fórmula do WCAG</caption><thead><tr><th scope="col">Combinação</th><th scope="col">Razão</th><th scope="col">Nível</th></tr></thead><tbody><tr><td>Texto claro (whitesmoke) sobre fundo preto</td><td>19,3:1</td><td>AAA (7:1 ou mais)</td></tr><tr><td>Destaque (greenyellow) sobre fundo preto</td><td>17,1:1</td><td>AAA (7:1 ou mais)</td></tr><tr><td>Texto secundário (darkgray) sobre fundo preto</td><td>8,9:1</td><td>AAA (7:1 ou mais)</td></tr><tr><td>Texto secundário (darkgray) sobre cards (#121212)</td><td>8,0:1</td><td>AAA (7:1 ou mais)</td></tr><tr><td>Laranja (orange) sobre fundo preto</td><td>10,6:1</td><td>AAA (7:1 ou mais)</td></tr><tr><td>Texto preto sobre botão em hover (greenyellow)</td><td>17,1:1</td><td>AAA (7:1 ou mais)</td></tr></tbody></table></div>
+        </section>
+        <section>
+            <h2>Navegando pelo teclado</h2>
+            <div class="tabela-wrap"><table><caption>Atalhos básicos</caption><thead><tr><th scope="col">Tecla</th><th scope="col">O que faz</th></tr></thead><tbody>
+                <tr><td>Tab / Shift + Tab</td><td>Avança / volta entre links, botões e campos</td></tr>
+                <tr><td>Enter</td><td>Abre links e aciona botões</td></tr>
+                <tr><td>Espaço</td><td>Aciona botões e marca caixas de seleção</td></tr>
+                <tr><td>Esc</td><td>Fecha o menu no celular</td></tr>
+                <tr><td>Ctrl + / Ctrl -</td><td>Aumenta e diminui o zoom do navegador</td></tr></tbody></table></div>
+        </section>
+        <section>
+            <h2>Limitações e referências</h2>
+            <div class="conteudo">
+                <p>Ainda não fizemos testes com pessoas usuárias de leitores de tela nem passamos o código pelo validador do W3C. Essas verificações estão listadas como pendências no README. As fontes e imagens externas (como o mapa) dependem de terceiros.</p>
+                <ul><li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG 2.2 (W3C)<span class="sr-only"> (abre em nova aba)</span></a></li><li><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener noreferrer">Introdução à acessibilidade (W3C WAI)<span class="sr-only"> (abre em nova aba)</span></a></li><li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">Validador do W3C<span class="sr-only"> (abre em nova aba)</span></a></li></ul>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p class="mono">Você produz mais lixo do que imagina.</p>
+        <p>Lixo Invisível · Projeto acadêmico da UNICID (ADS) · Desenvolvimento Front-End · Grupo 7 · 2026</p>
+        <p><a href="#conteudo">Voltar ao topo</a> · <a href="contato.html">Fale com a equipe</a></p>
+    </footer>
+</body>
+</html>

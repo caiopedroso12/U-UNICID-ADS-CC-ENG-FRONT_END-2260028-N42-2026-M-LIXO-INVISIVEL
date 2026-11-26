@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídia | Lixo Invisível</title>
+    <meta name="description" content="Vídeo legendado, áudio com transcrição e mapa para encontrar pontos de descarte, do projeto Lixo Invisível.">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Orbitron:wght@700;900&amp;family=Space+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="marca" href="index.html">Lixo <span>Invisível</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+            <nav aria-label="Navegação principal">
+                <ul class="menu" id="menu"><li><a href="index.html">Home</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="impacto.html">Impacto</a></li><li><a href="acessibilidade.html">Acessibilidade</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="midia.html" aria-current="page">Mídia</a></li><li><a href="noticias.html">Notícias</a></li><li><a href="contato.html">Contato</a></li><li><a href="orcamento_hospedagem.html">Orçamento</a></li></ul>
+            </nav>
+        </div>
+    </header>
+    <main id="conteudo" class="interna">
+        <div class="page-hero">
+            <span class="rotulo">mídia</span>
+            <h1>Vídeo, áudio e mapa</h1>
+            <p>Para ver, ouvir e explorar, com legenda e transcrição.</p>
+        </div>
+
+        <section>
+            <div class="midia-bloco">
+                <h2>Vídeo</h2>
+                <video controls preload="metadata" poster="media/poster.jpg">
+                    <source src="media/lixo-invisivel.mp4" type="video/mp4">
+                    <track kind="captions" src="media/lixo-invisivel.vtt" srclang="pt-BR" label="Português (Brasil)" default>
+                    Seu navegador não suporta vídeo. <a href="media/lixo-invisivel.mp4">Baixe o arquivo</a>.
+                </video>
+                <details><summary>Transcrição do vídeo (15 segundos, sem narração)</summary>
+                    <p>1. O lixo que você não vê: digital, eletrônico e do cotidiano.<br>2. 62 milhões de toneladas de lixo eletrônico no mundo em 2022 (ONU/UIT).<br>3. Só 22,3% foi coletado e reciclado de forma documentada.<br>4. No Brasil, cerca de 3% do lixo eletrônico vai para reciclagem.<br>5. Você produz mais lixo do que imagina.</p>
+                </details>
+            </div>
+            <div class="midia-bloco">
+                <h2>Áudio</h2>
+                <audio controls preload="none"><source src="media/alerta-sonoro.mp3" type="audio/mpeg">Seu navegador não suporta áudio. <a href="media/alerta-sonoro.mp3">Baixe o arquivo</a>.</audio>
+                <details><summary>Transcrição do áudio</summary><p>Sinal sonoro de menos de 2 segundos, sem fala: três notas que sobem de tom, como uma notificação. É a identidade sonora do projeto, para lembrar que o lixo digital "apita" sem a gente notar.</p></details>
+                <h3 style="margin-top:1.5rem">Ouvir o resumo em voz alta</h3>
+                <p id="resumo" class="conteudo" style="color:var(--cor-texto-secundario)">O lixo invisível é aquele que a gente não enxerga: arquivos digitais acumulados, eletrônicos esquecidos e embalagens de uso curto. Em 2022, o mundo gerou 62 milhões de toneladas de lixo eletrônico, e só 22,3 por cento foi coletado e reciclado de forma documentada, segundo a ONU. No Brasil, cerca de 3 por cento vai para reciclagem. Pequenos hábitos ajudam: apagar o que você não usa, consertar ou entregar aparelhos em pontos de coleta e evitar descartáveis.</p>
+                <button id="ouvir" class="botao" type="button">Ouvir o resumo</button>
+            </div>
+            <div class="midia-bloco">
+                <h2>Mapa</h2>
+                <iframe title="Mapa de São Paulo do OpenStreetMap, para procurar pontos de descarte" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.75%2C-23.65%2C-46.50%2C-23.45&amp;layer=mapnik" loading="lazy"></iframe>
+                <p class="fonte">Mapa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© contribuidores do OpenStreetMap<span class="sr-only"> (abre em nova aba)</span></a>. <a href="https://www.openstreetmap.org/#map=12/-23.55/-46.63" target="_blank" rel="noopener noreferrer">Abrir mapa maior<span class="sr-only"> (abre em nova aba)</span></a> e use a busca por "ecoponto" ou "coleta de eletrônicos" na sua região.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p class="mono">Você produz mais lixo do que imagina.</p>
+        <p>Lixo Invisível · Projeto acadêmico da UNICID (ADS) · Desenvolvimento Front-End · Grupo 7 · 2026</p>
+        <p><a href="#conteudo">Voltar ao topo</a> · <a href="contato.html">Fale com a equipe</a></p>
+    </footer>
+</body>
+</html>
