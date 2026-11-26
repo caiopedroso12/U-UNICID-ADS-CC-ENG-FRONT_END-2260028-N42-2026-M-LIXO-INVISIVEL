@@ -2,50 +2,85 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lixo invisível</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lixo Invisível | O lixo que você não vê</title>
+    <meta name="description" content="Site educativo sobre lixo digital, eletrônico e do cotidiano: o lixo que produzimos sem perceber. Projeto acadêmico da UNICID.">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Orbitron:wght@700;900&amp;family=Space+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/app.js" defer></script>
 </head>
 <body>
-
-    <header class="hero">
-        <h1>O lixo que você não vê</h1>
-        <p>Todos os dias produzimos lixos resíduos: arquivos, eletrônicos e embalagens que raramente enxergamos como lixo.</p>
-        <a href="#sobre" class="botao">Saiba mais</a>
-
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="marca" href="index.html">Lixo <span>Invisível</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+            <nav aria-label="Navegação principal">
+                <ul class="menu" id="menu"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="impacto.html">Impacto</a></li><li><a href="acessibilidade.html">Acessibilidade</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="midia.html">Mídia</a></li><li><a href="noticias.html">Notícias</a></li><li><a href="contato.html">Contato</a></li><li><a href="orcamento_hospedagem.html">Orçamento</a></li></ul>
+            </nav>
+        </div>
     </header>
-
-    <section id="sobre">
-        <h2> O que é o lixo invisível?</h2>
-        <p>Boa parte do lixo que produzimos não é visível no dia a dia: arquivos digitais acumulados, aparelhos eletrônicos descartados ou esquecidos, e embalagens e produtos de uso curto. Esse tipo de resíduo raramente é discutido com a mesma atenção dada ao lixo físico comum, mesmo tendo impacto ambiental e social relevante.</p>
-
-
-        <div class="cards">
-            <div class="card">
-                <h3>Arquivos digitais</h3>
-                <p>Fotos, e-mails e downloads esquecidos que ocupam espaço e emergia sem necessidade.</p>
-
-            </div>
-
-            <div class="card">
-                <h3>Eletrônicos</h3>
-                <p> Celulares, cabos e aparelhos descartados sem descarte adequado</p>
+    <main id="conteudo" class="">
+        <div class="hero">
+            <h1>O lixo que você não vê</h1>
+            <p>Todos os dias produzimos resíduos: arquivos, eletrônicos e embalagens que raramente enxergamos como lixo.</p>
+            <div class="botoes">
+                <a href="#sobre" class="botao">Saiba mais</a>
+                <a href="impacto.html" class="botao secundario">Ver os números</a>
             </div>
         </div>
-        <div class="card">
-            <h3>Embalagens</h3>
-            <p>Produtos de uso curto que viram lixo em minutos após a compra.</p>
-        </div>
-    </section>
 
-    <section id="importa">
-        <h2>Por que isso importa</h2>
-        <p>O consumo digital e de eletrônicos só cresce — mas o descarte consciente ainda é pouco praticado, principalmente entre os jovens. Pequenos hábitos, como apagar arquivos desnecessários ou descartar um celular corretamente, evitam que esse lixo invisível se torne um problema real.</p>
+        <section id="sobre">
+            <h2>O que é o lixo invisível?</h2>
+            <p>Boa parte do lixo que produzimos não é visível no dia a dia: arquivos digitais acumulados, aparelhos eletrônicos descartados ou esquecidos, e embalagens e produtos de uso curto. Esse tipo de resíduo raramente é discutido com a mesma atenção dada ao lixo físico comum, mesmo tendo impacto ambiental e social relevante.</p>
 
-    </section>
+            <div class="cards tres">
+                <a class="card" href="projetos.html#digital">
+                    <h3>Arquivos digitais</h3>
+                    <p>Fotos, e-mails e downloads esquecidos que ocupam espaço e energia sem necessidade.</p>
+                </a>
+                <a class="card" href="projetos.html#eletronico">
+                    <h3>Eletrônicos</h3>
+                    <p>Celulares, cabos e aparelhos descartados ou esquecidos, sem destino adequado.</p>
+                </a>
+                <a class="card" href="projetos.html#cotidiano">
+                    <h3>Embalagens</h3>
+                    <p>Produtos de uso curto que viram lixo em minutos após a compra.</p>
+                </a>
+            </div>
+        </section>
 
+        <section id="importa">
+            <h2>Por que isso importa</h2>
+            <p>O consumo digital e de eletrônicos só cresce, mas o descarte consciente ainda é pouco praticado, principalmente entre os jovens. Pequenos hábitos, como apagar arquivos desnecessários ou descartar um celular corretamente, evitam que esse lixo invisível se torne um problema real.</p>
+            <div class="botoes"><a href="impacto.html" class="botao">Dados de impacto</a></div>
+        </section>
+
+        <section id="explore">
+            <h2>Explore o site</h2>
+            <p>Você produz mais lixo do que imagina. Escolha por onde começar.</p>
+            <div class="cards tres">
+                <a class="card" href="sobre.html"><span class="mono">01 / sobre</span><h3>Quem somos</h3><p>História, missão, visão, valores e equipe.</p></a>
+                <a class="card" href="projetos.html"><span class="mono">02 / projetos</span><h3>Três frentes</h3><p>Lixo digital, eletrônico e do cotidiano, com ações práticas.</p></a>
+                <a class="card" href="impacto.html"><span class="mono">03 / impacto</span><h3>Os números</h3><p>Dados e tabelas com fontes confiáveis.</p></a>
+                <a class="card" href="acessibilidade.html"><span class="mono">04 / acessibilidade</span><h3>Site para todos</h3><p>Medidas de inclusão aplicadas aqui.</p></a>
+                <a class="card" href="galeria.html"><span class="mono">05 / galeria</span><h3>Imagens</h3><p>Ilustrações com legenda e fonte.</p></a>
+                <a class="card" href="midia.html"><span class="mono">06 / mídia</span><h3>Vídeo, áudio e mapa</h3><p>Conteúdo para ver, ouvir e explorar.</p></a>
+                <a class="card" href="noticias.html"><span class="mono">07 / notícias</span><h3>Em pauta</h3><p>Notícias recentes sobre o tema.</p></a>
+                <a class="card" href="contato.html"><span class="mono">08 / contato</span><h3>Fale com a gente</h3><p>Formulário validado e equipe.</p></a>
+                <a class="card" href="orcamento_hospedagem.html"><span class="mono">09 / orçamento</span><h3>Hospedagem</h3><p>Comparativo de hospedagem e domínio.</p></a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p class="mono">Você produz mais lixo do que imagina.</p>
+        <p>Lixo Invisível · Projeto acadêmico da UNICID (ADS) · Desenvolvimento Front-End · Grupo 7 · 2026</p>
+        <p><a href="#conteudo">Voltar ao topo</a> · <a href="contato.html">Fale com a equipe</a></p>
+    </footer>
 </body>
 </html>
