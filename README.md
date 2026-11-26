@@ -177,7 +177,3 @@ ONU/ITU/UNITAR (Global E-waste Monitor 2024), IEA (Energy and AI, 2025), Abrelpe
 - Testar com leitor de tela e em aparelhos reais.
 - Conferir os links externos e os preços antes da entrega, porque podem mudar.
 - Trocar o vídeo, o áudio e as ilustrações por material próprio, se o grupo preferir.
-
-## 19. Como publicar
-
-Subir todos os arquivos no repositório do GitHub, com o `index.html` na raiz, na branch `main`. Se for preciso um link do site no ar, dá para usar o GitHub Pages (Settings > Pages > branch `main`, pasta `/ (root)`), que é gratuito.
