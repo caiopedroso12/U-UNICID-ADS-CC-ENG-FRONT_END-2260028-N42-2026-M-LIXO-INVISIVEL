@@ -121,58 +121,63 @@ E o Escopo foi Elaborado por: Caio Pedroso, Leonardo Bryan e Joao Victor Moura
 Caio Pedroso De Oliveira Cruz
 Assinatura: Caio P O Cruz
 
+
 ---
 
 # Estado final do projeto
 
-## 14. Estrutura de diretórios
+## 14. Estrutura de arquivos
 
 ```
 index.html                  Home
 sobre.html                  História, missão, visão, valores e equipe
-projetos.html               Três frentes: digital, eletrônico e cotidiano
-impacto.html                Dados e tabelas com fontes
+projetos.html               As três frentes: digital, eletrônico e cotidiano
+impacto.html                Dados e tabelas com fonte
 acessibilidade.html         Medidas de inclusão, contraste e teclado
 galeria.html                Imagens com legenda e fonte
 midia.html                  Vídeo, áudio e iframe (mapa)
 noticias.html               Notícias com link para a fonte
-contato.html                Formulário HTML5 validado, dados fictícios, equipe
+contato.html                Formulário validado, dados fictícios e equipe
 orcamento_hospedagem.html   Comparativo de hospedagem e domínio
-css/style.css               Folha de estilos única (antes ficava na raiz)
-js/app.js                   Menu mobile, formulário, leitor de resumo, calculadora
-img/                        Ilustrações SVG e favicon
-media/                      Vídeo MP4, legendas VTT, poster e áudio MP3
-Link Deploy Railway         Link do deploy (mantido)
-README.md                   Este arquivo (antes "readme (1).md")
+css/style.css               Folha de estilos única
+js/app.js                   Menu no celular, formulário, leitor de resumo e calculadora
+img/                        Ilustrações em SVG e favicon
+media/                      Vídeo, legenda, poster e áudio
+README.md                   Este arquivo
 ```
 
-## 15. Decisões tomadas
+## 15. Decisões que tomamos
 
-- Home preservada: textos e identidade mantidos. Corrigidos o card "Embalagens" (estava fora da grade), o alinhamento do título de "Por que isso importa", e erros de texto ("lixos resíduos", "emergia").
-- As fontes Orbitron, Space Grotesk e JetBrains Mono (monoespaçada para rótulos) agora são carregadas pelo Google Fonts, com fontes de reserva.
-- Navegação repetida em cada HTML (sem JS obrigatório). Em telas até 1100 px o menu vira botão.
-- "Projetos" foi interpretado como as três frentes temáticas, com ações práticas. Missão, visão e valores foram redigidos a partir dos objetivos deste README e precisam de aprovação do grupo.
-- Imagens: ilustrações em SVG feitas para o projeto (sem direitos de terceiros). Vídeo (15 s, sem narração, com legenda) e áudio (sinal sonoro) foram gerados para o projeto. Se houver material real, é só trocar os arquivos em media/ e img/.
-- Iframe: mapa do OpenStreetMap (São Paulo).
-- Contato: todos os dados são fictícios (domínio .example) e o formulário só valida, não envia nada. O campo "último descarte" é opcional.
-- Nome "Abraão da Fortuna Batista" corrigido em relação a "Furtuna" do README original. RAs ficam só neste README, não no site.
-- Orçamento: preços em dólar e real sem conversão. Não há fonte confiável comparando a pegada de carbono entre provedores, e o site diz isso.
+- Mantivemos a Home e a identidade visual, e corrigimos alguns problemas: o card "Embalagens" estava fora da grade, o título de "Por que isso importa" estava desalinhado e havia erros de texto.
+- Carregamos as fontes Orbitron (títulos), Space Grotesk (texto) e JetBrains Mono (rótulos, monoespaçada), todas com fonte de reserva caso não carreguem.
+- O menu está repetido em cada página, sem depender de JavaScript. Em telas de até 1100 px ele vira um botão.
+- Entendemos "Projetos" como as três frentes do tema (digital, eletrônico e cotidiano), cada uma com ações práticas.
+- Escrevemos a missão, a visão e os valores com base nos objetivos da seção 3.
+- As imagens são ilustrações em SVG feitas para o projeto, sem direitos de terceiros. O vídeo e o áudio também foram produzidos para o projeto e são provisórios: dá para trocar por material novo em `media/` e `img/`.
+- O iframe é um mapa do OpenStreetMap (São Paulo).
+- No contato, todos os dados são fictícios e o formulário só valida os campos, não envia nada.
+- Não colocamos os RAs no site, só neste README.
+- No orçamento não convertemos dólar para real, porque o câmbio muda. Também não encontramos uma fonte confiável comparando a pegada de carbono entre hospedagens, então o site não afirma qual é a mais sustentável.
 
 ## 16. Fontes dos dados (consultadas em 24/11/2026)
 
-ONU/ITU/UNITAR (Global E-waste Monitor 2024), IEA (Energy and AI, 2025), Abrelpe (via Agência Brasil e Panorama 2020), JB, Tecnoblog, Brasil de Fato, S&P Global, Exame, Railway Docs, GitHub Docs, Teletime e TecMundo. Os links completos estão em impacto.html, noticias.html e orcamento_hospedagem.html.
+ONU/ITU/UNITAR (Global E-waste Monitor 2024), IEA (Energy and AI, 2025), Abrelpe (via Agência Brasil e Panorama 2020), JB, Tecnoblog, Brasil de Fato, S&P Global, Exame, Railway Docs, GitHub Docs, Teletime e TecMundo. Os links completos estão nas páginas de impacto, notícias e orçamento.
 
-## 17. Testes realizados
+## 17. Testes feitos
 
-Auditoria automática dos arquivos locais (links, âncoras, imagens, alt, títulos, menu) e verificação em navegador headless. Resultados no relatório de entrega.
+- Conferência dos links e âncoras entre as 10 páginas e da navegação pelo menu.
+- Texto alternativo em todas as imagens e label em todos os campos do formulário.
+- Formulário testado com dados válidos e inválidos (campo vazio, telefone fora do padrão).
+- Layout em celular (375 px), tablet (768 px) e desktop (1366 px), sem rolagem horizontal.
+- Vídeo, áudio e calculadora de custo funcionando.
 
 ## 18. Pendências
 
-- Passar as páginas pelo validador do W3C (https://validator.w3.org/); não foi possível aqui.
-- Testar com leitor de tela real e em aparelhos físicos.
-- Conferir os links externos e os preços antes da entrega (podem mudar).
-- Aprovar missão, visão e valores; trocar mídia gerada por material próprio, se o grupo quiser.
+- Passar as páginas pelo validador do W3C (https://validator.w3.org/).
+- Testar com leitor de tela e em aparelhos reais.
+- Conferir os links externos e os preços antes da entrega, porque podem mudar.
+- Trocar o vídeo, o áudio e as ilustrações por material próprio, se o grupo preferir.
 
-## 19. Publicação
+## 19. Como publicar
 
-GitHub: crie o commit com todos os arquivos (index.html na raiz), faça push na branch main. Railway: conecte o repositório, faça o deploy (site estático) e atualize o arquivo "Link Deploy Railway" com a URL https. Alternativa gratuita: GitHub Pages, em Settings > Pages, branch main, pasta raiz.
+Subir todos os arquivos no repositório do GitHub, com o `index.html` na raiz, na branch `main`. Se for preciso um link do site no ar, dá para usar o GitHub Pages (Settings > Pages > branch `main`, pasta `/ (root)`), que é gratuito.

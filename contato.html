@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Lixo Invisível</title>
+    <meta name="description" content="Formulário de contato validado, dados fictícios e membros da equipe do projeto Lixo Invisível.">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Orbitron:wght@700;900&amp;family=Space+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="marca" href="index.html">Lixo <span>Invisível</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+            <nav aria-label="Navegação principal">
+                <ul class="menu" id="menu"><li><a href="index.html">Home</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="impacto.html">Impacto</a></li><li><a href="acessibilidade.html">Acessibilidade</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="midia.html">Mídia</a></li><li><a href="noticias.html">Notícias</a></li><li><a href="contato.html" aria-current="page">Contato</a></li><li><a href="orcamento_hospedagem.html">Orçamento</a></li></ul>
+            </nav>
+        </div>
+    </header>
+    <main id="conteudo" class="interna">
+        <div class="page-hero">
+            <span class="rotulo">contato</span>
+            <h1>Fale com a gente</h1>
+            <p>Dados de contato fictícios e formulário de demonstração.</p>
+        </div>
+
+        <section>
+            <form id="form-contato" class="form" action="#" method="post">
+                <p class="fonte">Campos com <span class="obrig">*</span> são obrigatórios.</p>
+                <div class="campo"><label for="nome">Nome completo <span class="obrig">*</span></label><input id="nome" name="nome" type="text" required minlength="3" autocomplete="name"></div>
+                <div class="campo"><label for="email">E-mail <span class="obrig">*</span></label><input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@exemplo.com"></div>
+                <div class="campo"><label for="tel">Telefone</label><input id="tel" name="tel" type="tel" inputmode="tel" pattern="\(?\d{2}\)?\s?9?\d{4}-?\d{4}" placeholder="(11) 91234-5678" autocomplete="tel"><small>Formato: (11) 91234-5678</small></div>
+                <div class="campo"><label for="cep">CEP</label><input id="cep" name="cep" type="text" inputmode="numeric" pattern="\d{5}-?\d{3}" placeholder="01234-567" autocomplete="postal-code"><small>Formato: 01234-567</small></div>
+                <div class="campo"><label for="assunto">Assunto <span class="obrig">*</span></label><select id="assunto" name="assunto" required><option value="">Selecione</option><option>Dúvida sobre o projeto</option><option>Sugestão de conteúdo</option><option>Correção de dados</option><option>Outro</option></select></div>
+                <div class="campo"><label for="aparelhos">Quantos aparelhos eletrônicos parados você tem em casa?</label><input id="aparelhos" name="aparelhos" type="number" min="0" max="99" step="1" inputmode="numeric"></div>
+                <div class="campo"><label for="ultimo">Quando foi seu último descarte de eletrônico?</label><input id="ultimo" name="ultimo" type="date"></div>
+                <div class="campo"><label for="msg">Mensagem <span class="obrig">*</span></label><textarea id="msg" name="msg" rows="5" required minlength="10" maxlength="500"></textarea><small>De 10 a 500 caracteres.</small></div>
+                <div class="campo"><label><input type="checkbox" name="aceite" required> Entendo que é uma simulação e que nenhum dado será enviado <span class="obrig">*</span></label></div>
+                <button class="botao" type="submit">Enviar mensagem</button>
+                <div id="retorno" class="retorno" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+        <section>
+            <h2>Dados de contato (fictícios)</h2>
+            <div class="cards tres">
+                <div class="card"><h3>E-mail</h3><p>contato@lixoinvisivel.example</p></div>
+                <div class="card"><h3>Telefone</h3><p>(11) 0000-0000</p></div>
+                <div class="card"><h3>Endereço</h3><p>Rua Exemplo, 123, São Paulo/SP</p></div>
+            </div>
+        </section>
+        <section>
+            <h2>Equipe</h2>
+            <div class="cards tres"><div class="card"><h3>Abraão da Fortuna Batista</h3><p class="mono">Grupo 7</p></div><div class="card"><h3>Caio Pedroso de Oliveira Cruz</h3><p class="mono">Grupo 7</p></div><div class="card"><h3>Daniel Buarque</h3><p class="mono">Grupo 7</p></div><div class="card"><h3>Gustavo Brito Alves</h3><p class="mono">Grupo 7</p></div><div class="card"><h3>Leonardo Bryan Evaristo</h3><p class="mono">Grupo 7</p></div><div class="card"><h3>João Victor Moura de Oliveira</h3><p class="mono">Grupo 7</p></div></div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p class="mono">Você produz mais lixo do que imagina.</p>
+        <p>Lixo Invisível · Projeto acadêmico da UNICID (ADS) · Desenvolvimento Front-End · Grupo 7 · 2026</p>
+        <p><a href="#conteudo">Voltar ao topo</a> · <a href="contato.html">Fale com a equipe</a></p>
+    </footer>
+</body>
+</html>
